@@ -8,7 +8,11 @@ An end-to-end retail sales and inventory analytics project featuring Python-base
 This project is designed to monitor retail sales performance, track multi-channel inventory, analyze regional sales distribution, and evaluate top-performing product categories. It demonstrates complete data analytics capabilities from raw data preprocessing to executive dashboard design.
 
 ---
+## 🗂️ Dataset Source
+* **Source:** Publicly available retail sales dataset sourced from **Kaggle**.
+* **Processing:** The raw dataset underwent data cleaning, missing value handling, and date formatting using Python (Pandas) before being loaded into Power BI.
 
+---
 ## 🛠️ Tech Stack & Skills Demonstrated
 * **Data Preprocessing & Cleaning:** Python (Pandas)
 * **Business Intelligence & Visualization:** Power BI Desktop
