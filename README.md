@@ -28,4 +28,4 @@ This project is designed to monitor retail sales performance, track multi-channe
 * `project_report.md` - Comprehensive documentation detailing business insights, technical methodology, and workflow.
 
 ---
-*Created with ❤️ by Amreek Singh*
+*Created with ❤️ by Amreek Singh*.
