@@ -1,35 +1,60 @@
-# 📊 Retail & Sales Inventory Optimization
+Retail & Sales Inventory Optimization Portfolio Project
 
-An end-to-end retail sales and inventory analytics project featuring Python-based data cleaning and an interactive Power BI executive dashboard with custom DAX chronological sorting.
+An end-to-end data analytics portfolio project demonstrating data engineering, relational database schema design, and interactive business intelligence dashboarding using Python, MySQL, and Power BI.
 
----
+📊 Project Overview
 
-## 📌 Project Overview
-This project is designed to monitor retail sales performance, track multi-channel inventory, analyze regional sales distribution, and evaluate top-performing product categories. It demonstrates complete data analytics capabilities from raw data preprocessing to executive dashboard design.
+This project analyzes a large-scale retail dataset consisting of 301,647 rows and 31 columns. The objective is to uncover key sales trends, optimize inventory distribution, and provide executive-level visibility into revenue drivers, customer demographics, and product performance.
 
----
-## 🗂️ Dataset Source
-* **Source:** Publicly available retail sales dataset sourced from **Kaggle**.
-* **Processing:** The raw dataset underwent data cleaning, missing value handling, and date formatting using Python (Pandas) before being loaded into Power BI.
+Key Metrics Summary:
 
----
-## 🛠️ Tech Stack & Skills Demonstrated
-* **Data Preprocessing & Cleaning:** Python (Pandas)
-* **Business Intelligence & Visualization:** Power BI Desktop
-* **Data Modeling & Querying:** Power Query, DAX (Data Analysis Expressions)
+Total Revenue: ~$76.78M
 
----
+Total Customers: 86,728
 
-## 📐 Key Logic & Solutions
-* **Chronological Sorting:** Resolved default alphabetical sorting issues for months by engineering a custom numeric `Month_Number` calculated column using DAX (`January` to `December`).
-* **Executive KPIs:** Real-time tracking of Total Revenue, Total Customers, Total Purchases, and Average Order Value (AOV).
+Total Purchases: 1.61M+ units
 
----
+Average Order Value (AOV): $255.16
 
-## 📂 Project Repository Structure
-* `Cleaned_Retail_Sales.csv` - The processed and cleaned dataset ready for business analysis.
-* `Retail_Sales_Inventory_Optimization.pbix` - The main Power BI dashboard file containing data models, DAX measures, and interactive visuals.
-* `project_report.md` - Comprehensive documentation detailing business insights, technical methodology, and workflow.
+🛠️ Tech Stack & Tools
 
----
-*Created with ❤️ by Amreek Singh*.
+Python (Pandas): Data cleaning, anomaly handling, missing value imputation, and date standardization.
+
+MySQL: Database architecture design, schema creation (retail_inventory_db), and DDL table structuring.
+
+Power BI Desktop: Interactive dashboard design, custom DAX measures, dynamic slicers, and professional formatting.
+
+📁 Repository Structure
+
+├── data/
+│   └── Cleaned_Retail_Sales.csv   # Cleaned dataset ready for import
+├── scripts/
+│   └── data_cleaning.py           # Python script for data preprocessing
+├── database/
+│   └── schema_ddl.sql             # MySQL database and table setup scripts
+├── dashboardfiles/
+│   └── Dashboard.png              # Visual preview of the final Power BI dashboard
+└── README.md                      # Project documentation
+
+
+
+🚀 Step-by-Step Execution Workflow
+
+Data Preprocessing (Python):
+Executed data cleaning scripts to handle duplicates, clean string attributes, and format date-time fields.
+
+Database Setup (MySQL):
+Created the relational database environment and structured table definitions for analytical storage.
+
+Visualization & Insights (Power BI):
+Imported Cleaned_Retail_Sales.csv, configured KPI cards, built Monthly Revenue Trends, Category Breakdowns, and Top 10 Product rankings.
+
+📈 Dashboard Preview
+
+The dashboard delivers a clean, professional executive layout featuring global filters for Country and Payment Methods, tracking multi-million-dollar retail performance seamlessly.
+
+👤 Author
+
+Amreek
+
+Data Analyst & Business Intelligence Enthusiast
