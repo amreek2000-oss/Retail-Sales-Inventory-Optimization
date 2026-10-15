@@ -1,33 +1,90 @@
-🛒 Enterprise Retail Analytics & Inventory OptimizationAn end-to-end data engineering and business intelligence project demonstrating scalable ETL processing, relational schema design, and interactive decision-support analytics over 301,647 enterprise transaction records.📌 Business Overview & Problem StatementModern retail enterprises manage high-volume transactional pipelines across diverse product lines and payment channels. Without automated preprocessing and central business intelligence, organizations face:Inventory Disconnects: Overstocking low-margin SKUs while facing stockouts on top revenue drivers.Data Quality Bottlenecks: Fragmented records, inconsistent column formats, and uncategorized entries impacting board-level metrics.Reporting Inefficiencies: Lack of dynamic dashboards for tracking Revenue, Order Value (AOV), and customer buying behavior in real time.This project delivers an automated pipeline that cleanses raw transaction streams, constructs a normalized database model in MySQL, and serves executive metrics via interactive Power BI visual models.📊 Executive Key Performance Indicators (KPIs)MetricEnterprise ValueBusiness SignificanceTotal Revenue$76.78MNet top-line performance across all product categories.Unique Customers86,728Distinct customer base engaging in transaction volume.Total Order Volume1.61M+ UnitsTotal item-level inventory purchases tracked.Average Order Value (AOV)$255.16Average spend generated per customer transaction.🏗️ System Architecture & Data Flow+------------------+      +-------------------------+      +------------------------+
-|  Raw Retail Data | ---> |  Python ETL Engine      | ---> | Cleansed CSV Pipeline  |
-|  (301k+ Records) |      |  - Null Remediation     |      | (Cleaned_Retail.csv)   |
-+------------------+      |  - Type Coercion        |      +------------------------+
-                          |  - Structural Normalization       |
-                          +-------------------------+                 |
-                                                                      v
-+------------------+      +-------------------------+      +------------------------+
-| Executive BI     | <--- | Business Intelligence   | <--- | MySQL Database         |
-| Dashboard        |      | Layer (Power BI DAX)    |      | (retail_inventory_db)  |
-+------------------+      +-------------------------+      +------------------------+
-🛠️ Tech Stack & Technical Implementation1. Data Pipeline & Processing (Python / Pandas)Automated Ingestion: Handles raw data, standardizing field headers into normalized snake_case formatting.Null Value Remediation: Replaces non-standard values across categorical attributes with explicit tags to preserve data completeness.Numeric Standardization: Coerces financial and volume fields (amount, total_purchases, rating_products) into optimized data types.2. Relational Database Modeling (MySQL)Structured relational schema (retail_inventory_db) utilizing optimized SQL DDL data types (VARCHAR, DECIMAL(10,2), INT).Primary Key and index indexing strategy designed for scalable query performance across millions of rows.3. Analytics & Visualization (Power BI)Developed specialized DAX measures for core business calculations (Total Revenue, Total Customers, Average Order Value).Implemented multi-slicer filtering (Country, Payment Channel, Product Category) to enable drill-down analysis.📈 Key Insights & Strategic RecommendationsCategory Performance Engine: Electronics and Grocery contribute over 45% of total gross sales revenue, signaling key focus areas for supplier negotiation and priority warehousing.SKU Profitability: Top-tier electronics (e.g., HDR TV, Google Pixel) generate high gross margins and should be backed by safety stock buffer targets.Order Flow Optimization: Seasonal trends indicate revenue surges during specific operating quarters, requiring proactive inventory staging 30 days prior to peak periods.📂 Repository Structure├── 📁 data/
-│   └── Cleaned_Retail_Sales.csv          # Production-ready dataset
+🛒 Enterprise Retail Analytics & Inventory Optimization
+
+📌 Executive Summary:
+
+An end-to-end data engineering and business intelligence solution processing 301,647 enterprise transaction records. This project transforms raw, unstructured sales data into a normalized MySQL relational model and serves interactive executive dashboards via Power BI.
+
+🎯 Key Performance Indicators (KPIs):
+
+💰 Total Revenue: $76.78M:- (Net top-line financial performance across all product categories).
+👥 Unique Customers: 86,728:- (Total distinct customer base engaging in active transactions).
+📦 Total Items Purchased: 1.61M+ Units:- (Complete volume of inventory units sold across channels).
+💳 Average Order Value (AOV): $255.16:- (Mean monetary spend generated per customer transaction).
+
+🏗️ System Architecture & Data Pipeline:
+
+Raw Transaction Logs (301k+ Records) 👇  (Inconsistent formats, missing values, duplicates).
+
+🐍 Python ETL Engine (data_cleaning.py)👇  (Null remediation, schema standardization, type casting).
+
+📄 Cleaned CSV Data Pipeline (Cleaned_Retail_Sales.csv)👇  (Production-ready dataset).
+
+🐬 MySQL Relational Database (retail_inventory_db)👇  (Normalized DDL schemas & primary key indexing).
+
+📊 Interactive Power BI BI Suite (Dashboard.pbix)👇  (Executive KPIs, temporal trends & category breakdowns).
+
+🛠️ Technical Stack & Implementation Details:
+
+🐍 1. Python Data Preprocessing (data_cleaning.py):-
+🧹 Null Treatment: Safely populated missing categorical entries without dropping valuable records.
+🔢 Type Normalization: Explicitly converted financial and volumetric columns (amount, total_purchases) to numerical data types.
+🔤 Header Formatting: Standardized column names into consistent snake_case.
+
+🐬 2. Relational Database Schema (MySQL):- 
+📐 DDL Implementation: Enforced explicit column data typing (DECIMAL, VARCHAR, INT) optimized for rapid querying.
+⚡ Data Integrity: Applied indexed primary keys for efficient join operations and relational scaling.
+
+📊 3. Interactive Dashboards (Power BI):-
+📈 Revenue Trend Analysis: Time-series line chart tracking monthly seasonal fluctuations.
+🍩 Category Breakdown: Donut chart evaluating top sales contributors across Electronics, Grocery, Clothing, Books, and Home Decor.
+🎛️ Dynamic Slicers: Interactive filtering for target market slicing by Country and Payment Method.
+
+💡 Strategic Business Insights:-
+📱 Core Revenue Drivers: Electronics and Grocery generate the highest revenue volumes (~45%+ of aggregate sales).
+🛍️ High-Value SKUs: Premium items like HDR TV and Google Pixel drive elevated order totals.
+💳 Payment Preferences: Digital channels (Credit Card, PayPal, Debit Card) capture over 80% of consumer transactions.
+
+📂 Project Repository Structure:-
+
+├── 📁 data/
+│   └── Cleaned_Retail_Sales.csv          # Cleaned production dataset (301k rows)
 ├── 📁 scripts/
 │   └── data_cleaning.py                  # Python ETL pipeline script
 ├── 📁 database/
-│   └── schema_ddl.sql                    # MySQL schema creation DDL
+│   └── schema_ddl.sql                    # MySQL database creation SQL schema
 ├── 📁 assets/
-│   ├── Dashboard_Overview.png            # Main Power BI dashboard interface
-│   ├── monthly_revenue_trend.png        # Time-series trend analytics visual
-│   └── revenue_by_category.png          # Category breakdown bar visual
-├── 📄 project_report.md                  # Detailed Analytical Project Report
-└── 📄 README.md                          # Repository Documentation
-🚀 Execution & Setup Guide1. PrerequisitesPython 3.9+MySQL Server 8.0+Power BI Desktop2. ETL Execution# Clone the repository
-git clone https://github.com/your-username/retail-sales-inventory-optimization.git
+│   ├── Dashboard_Overview.png            # Executive Power BI dashboard screenshot
+│   ├── monthly_revenue_trend.png        # Monthly trend chart visualization
+│   └── revenue_by_category.png          # Category breakdown visual chart
+├── 📄 project_report.md                  # Detailed business intelligence report
+└── 📄 README.md                          # Repository documentation
 
-# Navigate into project directory
-cd retail-sales-inventory-optimization
+🚀 How to Run This Project:-
 
-# Execute data cleaning script
+1️⃣ Clone the Repository:-
+git clone https://github.com/your-username/Retail-Sales-Inventory-Optimization.git
+cd Retail-Sales-Inventory-Optimization
+
+
+2️⃣ Run Python Data Pipeline:-
 python scripts/data_cleaning.py
-3. Database DeploymentLoad and execute database/schema_ddl.sql in MySQL Workbench or terminal client:SOURCE database/schema_ddl.sql;
-👤 Author & ConnectAmreekData Analyst | Analytics & Business Intelligence SpecialistLinkedIn: Your LinkedIn ProfileGitHub: Your GitHub ProfileIf you find this project informative or useful, please consider giving it a ⭐!
+
+3️⃣ Import Database Schema:-
+SOURCE database/schema_ddl.sql;
+
+
+👤 Author & Contact:- Amreek Singh
+
+
+🌐 GitHub: Amreek2000-oss
+
+💼 LinkedIn: https://www.linkedin.com/in/amreek-singh-767394272
+
+⭐ If you find this project useful, please consider giving it a star on GitHub!
+
+
+
+
+
+
+
