@@ -80,7 +80,7 @@ SOURCE database/schema_ddl.sql;
 👤 Author & Contact:- Amreek Singh
 
 
-🌐 GitHub: Amreek2000-oss
+🌐 GitHub: amreek2000-oss
 
 💼 LinkedIn: https://www.linkedin.com/in/amreek-singh-767394272
 
