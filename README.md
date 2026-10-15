@@ -1,60 +1,28 @@
-Retail & Sales Inventory Optimization Portfolio Project
-
-An end-to-end data analytics portfolio project demonstrating data engineering, relational database schema design, and interactive business intelligence dashboarding using Python, MySQL, and Power BI.
-
-📊 Project Overview
-
-This project analyzes a large-scale retail dataset consisting of 301,647 rows and 31 columns. The objective is to uncover key sales trends, optimize inventory distribution, and provide executive-level visibility into revenue drivers, customer demographics, and product performance.
-
-Key Metrics Summary:
-
-Total Revenue: ~$76.78M
-
-Total Customers: 86,728
-
-Total Purchases: 1.61M+ units
-
-Average Order Value (AOV): $255.16
-
-🛠️ Tech Stack & Tools
-
-Python (Pandas): Data cleaning, anomaly handling, missing value imputation, and date standardization.
-
-MySQL: Database architecture design, schema creation (retail_inventory_db), and DDL table structuring.
-
-Power BI Desktop: Interactive dashboard design, custom DAX measures, dynamic slicers, and professional formatting.
-
-📁 Repository Structure
-
-├── data/
-│   └── Cleaned_Retail_Sales.csv   # Cleaned dataset ready for import
-├── scripts/
-│   └── data_cleaning.py           # Python script for data preprocessing
-├── database/
-│   └── schema_ddl.sql             # MySQL database and table setup scripts
-├── dashboardfiles/
-│   └── Dashboard.png              # Visual preview of the final Power BI dashboard
-└── README.md                      # Project documentation
-
-
-
-🚀 Step-by-Step Execution Workflow
-
-Data Preprocessing (Python):
-Executed data cleaning scripts to handle duplicates, clean string attributes, and format date-time fields.
-
-Database Setup (MySQL):
-Created the relational database environment and structured table definitions for analytical storage.
-
-Visualization & Insights (Power BI):
-Imported Cleaned_Retail_Sales.csv, configured KPI cards, built Monthly Revenue Trends, Category Breakdowns, and Top 10 Product rankings.
-
-📈 Dashboard Preview
-
-The dashboard delivers a clean, professional executive layout featuring global filters for Country and Payment Methods, tracking multi-million-dollar retail performance seamlessly.
-
-👤 Author
-
-Amreek
-
-Data Analyst & Business Intelligence Enthusiast
+🛒 Retail & Sales Inventory OptimizationAn enterprise-grade, end-to-end Data Analytics portfolio project demonstrating Data Engineering, Relational Database Design, and Executive Dashboarding using a massive dataset of 301,647 transaction records.📌 Executive SummaryThis project analyzes retail transaction patterns and inventory metrics to empower stakeholders with actionable sales insights. By building an automated data pipeline and visual analytics reporting suite, this solution optimizes stock levels, tracks consumer spending, and evaluates top-performing product categories.🎯 Key Performance Indicators (KPIs)💰 Total Revenue👥 Total Customers📦 Total Purchases💳 Avg Order Value$76.78M86,7281.61M+$255.16🏗️ Technical Architecture┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
+│   Raw Data      │ ───► │  Python Pipeline│ ───► │  Cleaned Data   │
+│ (301k+ Records) │      │ (Pandas/NumPy)  │      │  (CSV Storage)  │
+└─────────────────┘      └─────────────────┘      └─────────────────┘
+                                                           │
+                                                           ▼
+┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
+│ Power BI Dashboard│ ◄───│ Relational DB   │ ◄───│  MySQL Database │
+│ (Visual Analytics)│    │ (Data Modeling) │      │ (Schema & DDL)  │
+└─────────────────┘      └─────────────────┘      └─────────────────┘
+📊 Key Dashboard InsightsMonthly Revenue Trends: Identified high-volume peak months, allowing inventory managers to pre-stock fast-moving inventory.Category Breakdown: Electronics and Grocery emerge as primary revenue engines, together generating over 45% of total enterprise sales.Top 10 Product Ranking: Product-level ranking pinpoints high-margin SKUs such as HDR TV, Literary Fiction, and Google Pixel.🛠️ Tooling & Tech StackPython (Pandas & NumPy): Automated cleaning, missing value handling, datetime standardization, and deduplication.MySQL: Custom database architecture (retail_inventory_db), explicit column typing, and schema design.Power BI Desktop: Dynamic DAX metrics, custom interactivity, multi-slicer filtering, and user-centric layout formatting.📂 Repository Layout.
+├── 📁 data/
+│   └── Cleaned_Retail_Sales.csv       # Production-ready dataset
+├── 📁 scripts/
+│   └── data_cleaning.py               # Automated Python ETL pipeline
+├── 📁 database/
+│   └── schema_ddl.sql                 # MySQL schema creation scripts
+├── 📁 assets/
+│   ├── Dashboard_Overview.png         # Power BI dashboard screenshot
+│   ├── monthly_revenue_trend.png     # Trend graph visual
+│   └── revenue_by_category.png       # Category breakdown visual
+├── 📄 project_report.md               # Comprehensive Analytical Project Report
+└── 📄 README.md                       # Repository Documentation
+🚀 Getting StartedPrerequisitesPython 3.8+MySQL Workbench / ServerPower BI DesktopQuickstart GuideClone the repository:git clone https://github.com/your-username/retail-sales-inventory-optimization.git
+Run Data Preprocessing:python scripts/data_cleaning.py
+Set up Database:
+Import database/schema_ddl.sql into MySQL Server.View Visuals:
+Open the .pbix file in Power BI Desktop or inspect the screenshots in assets/.👤 Author & ContactAmreekData Analyst | BI & Business Intelligence SpecialistLinkedIn: Your LinkedIn ProfilePortfolio: Your Portfolio LinkIf you find this project helpful or inspiring, feel free to give it a ⭐️!
